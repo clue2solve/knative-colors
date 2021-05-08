@@ -3,6 +3,7 @@ package main
 import (
 	"html/template"
 	"net/http"
+	"os"
 )
 
 var index = `<!DOCTYPE html>
@@ -10,7 +11,7 @@ var index = `<!DOCTYPE html>
   <head>
     <style>
       body {
-        background-color: rgb({{ .red }}, {{ .green }}, {{ .blue }});
+        background-color: {{ .bg_clr }};
       }
     </style>
   </head>
@@ -31,10 +32,16 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	color := map[string]int{
-		"red":   255,
-		"green": 0,
-		"blue":  0,
+	color := map[string]string{
+		"bg_clr": getenv("HELLO_BG_COLOR", "blue"),
 	}
 	_ = indexTemplate.Execute(w, color)
+}
+
+func getenv(key, fallback string) string {
+	value := os.Getenv(key)
+	if len(value) == 0 {
+		return fallback
+	}
+	return value
 }
