@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"strconv"
 
 	"github.com/kelseyhightower/envconfig"
 )
@@ -18,9 +19,9 @@ func main() {
 	}
 
 	handler := new(Handler)
-
-	log.Printf("Server starting on port :%d\n", env.Port)
-	if err := http.ListenAndServe(":8080", handler); err != nil {
+	myport := ":" + strconv.Itoa(env.Port)
+	log.Printf("Server starting on port :%s\n", myport)
+	if err := http.ListenAndServe(myport, handler); err != nil {
 		log.Fatalf("failed to start server, %s", err.Error())
 	}
 }
