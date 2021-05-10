@@ -8,7 +8,7 @@ Colors is a bare bone app that serves a simple blank html page with background c
 - main ==> latest combined code .  
 
 
-This is the companion app to showcase the basic features of [knative](http://knative.dev). This App in conjunction with the [cologrid](https://github.com/clue2solve/colorgrid) makes it simple to understand the flow. 
+This is the companion app to showcase the basic features of [knative](http://knative.dev). This App in conjunction with the [colorgrid](https://github.com/clue2solve/colorgrid) makes it simple to understand the flow. 
 
 <img src="/images/colors.png">
 
