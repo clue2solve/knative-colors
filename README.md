@@ -1,8 +1,8 @@
 # knative-colors
 
-Colors is a bare bone app that serves a simple blank html page with bacgreound color based on an ENV variable. The the branch names tells you the code for each iteration. The versions ( branches ) build on top of this. 
+Colors is a bare bone app that serves a simple blank html page with background color based on an ENV variable. The the branch names tells you the code for each iteration. The versions ( branches ) build on top of this. 
 
-This is the companion app to showcase the basic features of knative. This App in conjunction with the cologrid makes it simple to understand the flow. 
+This is the companion app to showcase the basic features of [knative](http://knative.dev). This App in conjunction with the [cologrid](https://github.com/clue2solve/colorgrid) makes it simple to understand the flow. 
 
 <img src="/images/colors.png">
 
