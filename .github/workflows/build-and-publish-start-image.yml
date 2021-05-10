@@ -17,3 +17,5 @@ jobs:
       - uses: imjasonh/setup-ko@v0.4
       - run: cd ui && yarn build && cd ..
       - run: ko publish ./cmd/colors/ -B -t "start"
+
+      
